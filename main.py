@@ -10,6 +10,16 @@
 from alarm_clock import AlarmClock
 from product import Product
 from shopping_cart import ShoppingCart
+from customer import Customer
+
+
+
+myself = Customer ("Amy")
+myself.add_to_cart ("detergent", 20, "cleaning")
+myself.add_to_cart ("lotion", 5, "toiletries")
+myself.add_to_cart ("conditioner", 5, "toiletries")
+myself.view_cart_contents ()
+
 
 
 my_cart = ShoppingCart ()
