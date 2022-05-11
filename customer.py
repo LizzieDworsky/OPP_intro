@@ -1,10 +1,6 @@
 from shopping_cart import ShoppingCart
 
 
-#As a developer, I want the Customer class to have a method to view all products in the customer’s shopping cart. (Loop over the shopping cart’s products list and print each product to the terminal)
-
-
-
 class Customer:
     def __init__(self, name):
         self.name = name
