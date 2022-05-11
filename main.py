@@ -7,37 +7,42 @@
 #4. Call the customer’s shopping cart’s get cart total method. Capture the total the method returns in a variable and print to the terminal
 #5. Call the customer’s shopping cart’s empty cart method
 #6. Check if all products have been removed from the shopping cart
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from alarm_clock import AlarmClock
+from product import Product
+from shopping_cart import ShoppingCart
+
+
+my_cart = ShoppingCart ()
+my_cart.add_product_to_cart ("Detergent", 20, "Cleaning")
+print (my_cart.cart_contents)
+my_cart.empty_the_cart()
+print (my_cart.cart_contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

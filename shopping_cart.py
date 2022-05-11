@@ -1,11 +1,16 @@
-
-
-#As a developer, I want the ShoppingCart class to have class properties to keep track of the ShoppingCart’s products (list).
-#As a developer, I want the ShoppingCart class to have a method to calculate and return the current total of all products in the cart.
-#As a developer, I want the ShoppingCart class to have a method to add a new product to the cart. (Appending to the products list)
-#As a developer, I want the ShoppingCart class to have a method to empty all products from the shopping cart.
+from product import Product
 
 
 class ShoppingCart:
     def __init__(self):
-        pass
+        self.cart_contents = []
+    
+    def amount_currently_in_cart (self):
+        total = len (self.cart_contents)
+        return total
+    
+    def add_product_to_cart (self, product_name, product_price, product_category):
+        self.cart_contents.append (Product(product_name, product_price, product_category))
+    
+    def empty_the_cart (self):
+        self.cart_contents = []
