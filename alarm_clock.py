@@ -1,12 +1,36 @@
-#As a developer, I want to use Python’s proper snake_case for variable names.
-#As a developer, I want to create a AlarmClock class.
-#As a developer, I want the AlarmClock class to have class instance variables to keep track of the AlarmClock’s current time, 
-# whether the alarm is on or off, and the time the alarm is set to. (You can use arbitrary strings to represent the time, 
-# it does not need to accurately tell the current time or change over time).
-#As a developer, I want the AlarmClock class to have a method to set (or change) the current time and print to the console the current time.
-#As a developer, I want the AlarmClock class to have a method to toggle the alarm on or off.
-#As a developer, I want the AlarmClock class to have a method to set the current alarm time and print to the console the current alarm time.
-#As a developer, I want to import the AlarmClock class into main.py so I can instantiate it as a new AlarmClock object and call methods on it.
-#1. Print the clock’s time to the terminal
-#2. Call the alarm clock’s change current time method to change the current time
-#3. Toggle the alarm clock’s on off switch
+
+class AlarmClock:
+    def __init__(self):
+        self.current_time = ""
+        self.alarm_is_on = True
+        self.alarm_time = ""
+
+    def update_current_time(self):
+        print (self.current_time)
+        self.current_time = input ("Please update the current time: ")
+        print (f"The current time is now {self.current_time}.")
+    
+    def set_alarm_time(self):
+        print (self.alarm_time)
+        self.alarm_time = input ("Please update the time you would like the alarm set to: ")
+        print (f"The alarm time is now set to {self.alarm_time}.")
+    
+    def turn_alarm_on_off(self):
+        if self.alarm_is_on == True:
+            user_selection = input ("The alarm is currently on. Would you like to turn it off, y/n? ")
+            if user_selection == "y":
+                self.alarm_is_on = False
+                print ("The alarm is now off.")
+            else:
+                print ("We will leave the alarm on.")
+        else:
+            user_selection = input ("The alarm is currently off. Would you like to turn it on, y/n? ")
+            if user_selection == "y":
+                self.alarm_is_on = True
+                update_alarm = input (f"The alarm is currently set to {self.alarm_time}. Would you like to change it, y/n? ")
+                if update_alarm == "y":
+                    self.alarm_time = self.set_alarm_time()
+                else:
+                    print (f"We will leave the alarm set to {self.alarm_time}.")
+            else:
+                print ("We will leave the alarm off.")
